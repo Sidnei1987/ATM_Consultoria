@@ -1,0 +1,55 @@
+import 'package:flutter/material.dart';
+
+class TelaCliente extends StatefulWidget {
+  const TelaCliente({Key? key}) : super(key: key);
+
+  @override
+  _TelaClienteState createState() => _TelaClienteState();
+}
+
+class _TelaClienteState extends State<TelaCliente> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title:Text("Cliente"),
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.all(16),
+          child: Column(
+            children:<Widget> [
+              Row(
+                children:[
+                  Image.asset("imagens/detalhe_cliente.png"),
+                  Text(
+                    " Sobre a empresa ",
+                    style:TextStyle(
+                      color: Colors.red,
+                      fontSize: 20,
+                      fontStyle: FontStyle.normal,
+                    ),
+                  ),
+                ],
+              ),
+              Padding(padding: EdgeInsets.all(16),
+              child:Image.asset("imagens/cliente1.png"),
+                ),
+              Text(
+                  "Empresa de software"
+              ),
+              Padding(padding: EdgeInsets.all(16),
+                child:Image.asset("imagens/cliente2.png"),
+              ),
+              Text(
+                  "Empresa de auditoria"
+              )
+
+            ],
+          ),
+        ),
+
+      ),
+    );
+  }
+}
